@@ -7,11 +7,20 @@ class PersonalInfo extends React.Component{
   render() {
     return(
       <div>
-        <input type="text" name="" id=""/>
-        <input type="text" name="" id=""/>
-        <input type="email" name="" id=""/>
-        <input type="tel" name="" id=""/>
+        <label htmlFor="cv-name">Your name</label>
+        <input type="text" name="name" id="cv-name"/>
+
+        <label htmlFor="cv-address">Address</label>
+        <input type="text" name="address" id="cv-address"/>
+
+        <label htmlFor="cv-email">Your email</label>
+        <input type="email" name="email" id="cv-email"/>
+
+        <label htmlFor="cv-phone">Your phone</label>
+        <input type="tel" name="phone" id="cv-phone"/>
       </div>
     );
   }
 }
+
+export default PersonalInfo;
