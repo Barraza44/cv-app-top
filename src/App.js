@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
 import PersonalInfo from "./formcomponents/personalInfo";
+import SchoolInfo from "./formcomponents/schoolInfo";
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +10,11 @@ class App extends React.Component {
       names: "",
       address: "",
       email: "",
-      phone: ""
+      phone: "",
+      schoolName: "",
+      schoolDegree: "",
+      schoolStartDate: "",
+      schoolFinishDate: ""
     }
     this.handleChange.bind(this);
   }
@@ -25,6 +30,7 @@ class App extends React.Component {
       <form>
         <div>
           <PersonalInfo state={this.state} handleChange={this.handleChange}/>
+          <SchoolInfo handleChange={this.handleChange}/>
         </div>
       </form>
     );
