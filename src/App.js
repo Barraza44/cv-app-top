@@ -15,7 +15,13 @@ class App extends React.Component {
       schoolName: "",
       schoolDegree: "",
       schoolStartDate: "",
-      schoolFinishDate: ""
+      schoolFinishDate: "",
+      company: "",
+      position: "",
+      tasks:"",
+      workStart:"",
+      workEnd: "",
+      editing: false
     }
     this.handleChange.bind(this);
   }
@@ -31,8 +37,8 @@ class App extends React.Component {
       <form>
         <div>
           <PersonalInfo state={this.state} handleChange={this.handleChange}/>
-          <SchoolInfo handleChange={this.handleChange}/>
-          <WorkInfo handleChange={this.handleChange()} />
+          <SchoolInfo state={this.state} handleChange={this.handleChange}/>
+          <WorkInfo state={this.state} handleChange={this.handleChange} />
         </div>
       </form>
     );
