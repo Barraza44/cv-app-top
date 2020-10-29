@@ -32,6 +32,7 @@ class App extends React.Component {
         <div>
           <PersonalInfo state={this.state} handleChange={this.handleChange}/>
           <SchoolInfo handleChange={this.handleChange}/>
+          <WorkInfo handleChange={this.handleChange()} />
         </div>
       </form>
     );
