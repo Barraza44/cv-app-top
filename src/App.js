@@ -24,6 +24,7 @@ class App extends React.Component {
       editing: false
     }
     this.handleChange.bind(this);
+    this.handleSubmit.bind(this);
   }
 
   handleChange = (e) => {
@@ -32,9 +33,16 @@ class App extends React.Component {
     });
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({
+      editing: true
+    })
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <div>
           <PersonalInfo state={this.state} handleChange={this.handleChange}/>
           <SchoolInfo state={this.state} handleChange={this.handleChange}/>
