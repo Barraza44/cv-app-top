@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 import PersonalInfo from "./formcomponents/personalInfo";
 import SchoolInfo from "./formcomponents/schoolInfo";
+import WorkInfo from "./formcomponents/workInfo";
 
 class App extends React.Component {
   constructor(props) {

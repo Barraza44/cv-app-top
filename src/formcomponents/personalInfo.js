@@ -5,7 +5,6 @@ class PersonalInfo extends React.Component{
     super(props);
   }
   render() {
-    const {names, address, email, phone} = this.props.state;
     const {handleChange} = this.props;
 
     return(
